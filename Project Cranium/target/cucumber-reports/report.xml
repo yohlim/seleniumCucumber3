@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="23.468" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Create a coal selling listing" name="Success create a coal" time="22.929">
+<testsuite name="Cucumber" time="27.503" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Create a coal selling listing" name="Success create a coal" time="26.945">
 <failure type="org.openqa.selenium.ElementNotInteractableException" message="element not interactable
-  (Session info: chrome=123.0.6312.107)
+  (Session info: chrome=123.0.6312.123)
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2e1396404ccf70771513f61c8c5d775e, clickElement {id=f.C255CC1C986F368D1810C9D14A55362D.d.CA92D83A38605848D13C45BAAF6C7D87.e.165}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.107, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64839}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64839/devtoo..., se:cdpVersion: 123.0.6312.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2e1396404ccf70771513f61c8c5d775e)] -&gt; xpath: //button[contains(text(),'Publish')]]
-Session ID: 2e1396404ccf70771513f61c8c5d775e">
+Command: [85302927cf9b318930ed3e252d7e29fb, sendKeysToElement {value=[Ljava.lang.CharSequence;@659925f4, id=f.F2064C290EB2E7DD90AF7072C2BA76CA.d.AF1A3BA6B1E66E6737E6703F02DC946F.e.10473}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Cranium\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65271/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (85302927cf9b318930ed3e252d7e29fb)] -&gt; xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']]
+Session ID: 85302927cf9b318930ed3e252d7e29fb">
 <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=123.0.6312.107)
+  (Session info: chrome=123.0.6312.123)
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2e1396404ccf70771513f61c8c5d775e, clickElement {id=f.C255CC1C986F368D1810C9D14A55362D.d.CA92D83A38605848D13C45BAAF6C7D87.e.165}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.107, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64839}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64839/devtoo..., se:cdpVersion: 123.0.6312.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2e1396404ccf70771513f61c8c5d775e)] -> xpath: //button[contains(text(),'Publish')]]
-Session ID: 2e1396404ccf70771513f61c8c5d775e
+Command: [85302927cf9b318930ed3e252d7e29fb, sendKeysToElement {value=[Ljava.lang.CharSequence;@659925f4, id=f.F2064C290EB2E7DD90AF7072C2BA76CA.d.AF1A3BA6B1E66E6737E6703F02DC946F.e.10473}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Cranium\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65271/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (85302927cf9b318930ed3e252d7e29fb)] -> xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']]
+Session ID: 85302927cf9b318930ed3e252d7e29fb
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -30,9 +30,9 @@ Session ID: 2e1396404ccf70771513f61c8c5d775e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at stepDef.TestStep.userClikckOnButtonPublish(TestStep.java:225)
-	at ✽.user clikck on button publish(file:///D:/Automation%20Yohana%20(Februari%202024)/Project%20Cranium/src/test/resources/features/BLJualBatubara.feature:24)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at stepDef.TestStep.userInputFieldDescription(TestStep.java:224)
+	at ✽.user input field description(file:///C:/Latihan%20Automation/exercise%202/Project%20Cranium/src/test/resources/features/BLJualBatubara.feature:24)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -41,7 +41,8 @@ Then user click button login................................................pass
 And user input field email..................................................passed
 And user input field password...............................................passed
 And user click button login on login page and redirect to homepage..........passed
-And user access form jual batubara..........................................passed
+And user click button buat listingan........................................passed
+And user click on button jual batubara......................................passed
 And user input field GAR....................................................passed
 And user input field TS.....................................................passed
 And user input field Ash....................................................passed
@@ -50,8 +51,10 @@ And user input field Harga Batubara.........................................pass
 And user input field Sumber Batu............................................passed
 And user input field loading port...........................................passed
 And user input field laycan date............................................passed
-And user upload document....................................................passed
-And user clikck on button publish...........................................failed
+And user upload document from directory.....................................passed
+And user click button submit................................................passed
+And user input field description............................................failed
+And user clikck on button publish...........................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -137,26 +137,26 @@ public class TestStep extends env_target {
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='root']/div/div/div/div/header/div/div/div/div[5]/a")) // terdapat button Listing saya
         );
     }
-    @And("user access form jual batubara")
-    public void userAccessFormJualBatubara() {
-        driver.get(jualBatubaraLink);
-        Duration duration = Duration.ofSeconds(10);
-        WebDriverWait wait = new WebDriverWait(driver, duration);
-        wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[2]/div[2]/h3[contains (text(),'Jual Batubara')]")) //muncul wording 'jual batubara'
-        );
-
-    }
+//    @And("user access form jual batubara")
+//    public void userAccessFormJualBatubara() {
+//        driver.get(jualBatubaraLink);
+//        Duration duration = Duration.ofSeconds(10);
+//        WebDriverWait wait = new WebDriverWait(driver, duration);
+//        wait.until(
+//                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[2]/div[2]/h3[contains (text(),'Jual Batubara')]")) //muncul wording 'jual batubara'
+//        );
 //
-//    @And("user click button buat listingan")
-//    public void userClickButtonBuatListingan() {
-//        driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
 //    }
 
-//    @And("user click on button jual batubara")
-//    public void userClickOnButtonJualBatubara() {
-//        driver.findElement(By.xpath("//html/body/div[7]/div[3]/div[2]/div[1]/div/div/img")).click();
-//    }
+    @And("user click button buat listingan")
+    public void userClickButtonBuatListingan() {
+        driver.findElement(By.xpath("//div[@class='MuiStack-root css-mu3t9k']//button[contains(text(),'Buat Listingan')]")).click();
+    }
+
+    @And("user click on button jual batubara")
+    public void userClickOnButtonJualBatubara() {
+        driver.findElement(By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 w-700 css-1929n4j'][contains(text(),'Jual Batubara')]")).click();
+    }
 
     @And("user input field GAR")
     public void userInputFieldGAR() {
@@ -201,25 +201,29 @@ public class TestStep extends env_target {
         driver.findElement(By.xpath("//div[@class='MuiDayCalendar-weekContainer css-mvmu1r']//button[text()='6']")).click(); // untuk mengklik tanggal yang diinginkan
     }
 
-    @And("user upload document")
-    public void userUploadDocument() {
+    @And("user upload document from directory")
+    public void userUploadDocumentFromDirectory() {
         //untuk mendapatkan file yang ingin diupload
-        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[2]/div[1]/input")).sendKeys("D:\\Automation Yohana (Februari 2024)\\Dokumen testing\\pdf\\contoh.pdf");
+        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[2]/div[1]/input")).sendKeys("C:\\Latihan Automation\\file dummy\\contoh.pdf");
+
+    }
+
+    @And("user click button submit")
+    public void userClickButtonSubmit() {
+        driver.findElement(By.xpath("//div[@class='MuiStack-root css-x260d1']//button[contains(text(),'Submit')]")).click();
         Duration duration = Duration.ofSeconds(100);
         WebDriverWait wait = new WebDriverWait(driver, duration);
         wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='MuiStack-root css-1ialerq']//button"))
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[2]/div/div/div[2]/div/div/div/div/a"))
         );
-        driver.findElement(By.xpath("//div[@class='MuiStack-root css-x260d1']//button[contains(text(),'Submit')]")).click();
-//        driver.findElement(By.xpath("//div[@class='MuiStack-root css-1ialerq']//button")).click();
+
+}
+
+    @And("user input field description")
+    public void userInputFieldDescription() {
+        driver.findElement(By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']")).sendKeys("Testing by Yohana Limbong");
     }
 
-//
-//    @And("user input field description")
-//    public void userInputFieldDescription() {
-//        driver.findElement(By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']")).sendKeys("Testing by Yohana Limbong");
-//    }
-//
     @And("user clikck on button publish")
     public void userClikckOnButtonPublish() {
         driver.findElement(By.xpath("//button[contains(text(),'Publish')]")).click();
