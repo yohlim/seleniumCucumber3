@@ -213,7 +213,7 @@ public class TestStep extends env_target {
         Duration duration = Duration.ofSeconds(800000);
         WebDriverWait wait = new WebDriverWait(driver, duration);
         wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".react-pdf__Page__canvas"))
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".react-pdf__Page__canvas")) //dapat membaca file yang di upload
         );
 
 }
