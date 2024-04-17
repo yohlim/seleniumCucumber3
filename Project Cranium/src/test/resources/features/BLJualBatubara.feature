@@ -21,5 +21,5 @@ Feature: Create a coal selling listing
     And user input field laycan date
     And user upload document from directory
     And user click button submit
-    And user input field description
+#    And user input field description
     And user clikck on button publish

@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="27.503" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Create a coal selling listing" name="Success create a coal" time="26.945">
-<failure type="org.openqa.selenium.ElementNotInteractableException" message="element not interactable
-  (Session info: chrome=123.0.6312.123)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [85302927cf9b318930ed3e252d7e29fb, sendKeysToElement {value=[Ljava.lang.CharSequence;@659925f4, id=f.F2064C290EB2E7DD90AF7072C2BA76CA.d.AF1A3BA6B1E66E6737E6703F02DC946F.e.10473}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Cranium\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65271/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (85302927cf9b318930ed3e252d7e29fb)] -&gt; xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']]
-Session ID: 85302927cf9b318930ed3e252d7e29fb">
-<![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=123.0.6312.123)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [85302927cf9b318930ed3e252d7e29fb, sendKeysToElement {value=[Ljava.lang.CharSequence;@659925f4, id=f.F2064C290EB2E7DD90AF7072C2BA76CA.d.AF1A3BA6B1E66E6737E6703F02DC946F.e.10473}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Cranium\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65271/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (85302927cf9b318930ed3e252d7e29fb)] -> xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']]
-Session ID: 85302927cf9b318930ed3e252d7e29fb
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at stepDef.TestStep.userInputFieldDescription(TestStep.java:224)
-	at ✽.user input field description(file:///C:/Latihan%20Automation/exercise%202/Project%20Cranium/src/test/resources/features/BLJualBatubara.feature:24)
-]]>
-</failure>
+<testsuite name="Cucumber" time="13.556" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Create a coal buying listing" name="Success to create a coal buying listing" time="13.329">
 <system-out><![CDATA[
 Given User is on indomine homepage..........................................passed
 Then user click button login................................................passed
@@ -42,19 +8,16 @@ And user input field email..................................................pass
 And user input field password...............................................passed
 And user click button login on login page and redirect to homepage..........passed
 And user click button buat listingan........................................passed
-And user click on button jual batubara......................................passed
-And user input field GAR....................................................passed
-And user input field TS.....................................................passed
-And user input field Ash....................................................passed
-And user input field Quantity...............................................passed
-And user input field Harga Batubara.........................................passed
-And user input field Sumber Batu............................................passed
-And user input field loading port...........................................passed
-And user input field laycan date............................................passed
-And user upload document from directory.....................................passed
-And user click button submit................................................passed
-And user input field description............................................failed
-And user clikck on button publish...........................................skipped
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then user click button cari batubara........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

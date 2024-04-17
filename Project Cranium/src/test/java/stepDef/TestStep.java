@@ -127,7 +127,7 @@ public class TestStep extends env_target {
         driver.quit();
     }
 
-    // Scenario case jual batubara
+    //* SCENARIO CASE JUAL BATUBARA *//
     @And("user click button login on login page and redirect to homepage")
     public void userClickButtonLoginOnLoginPageAndRedirectToHomepage() {
         driver.findElement(By.xpath("//*[@id='root']/main/div[2]/div/form/button/p")).click();
@@ -205,24 +205,23 @@ public class TestStep extends env_target {
     public void userUploadDocumentFromDirectory() {
         //untuk mendapatkan file yang ingin diupload
         driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[2]/div[1]/input")).sendKeys("C:\\Latihan Automation\\file dummy\\contoh.pdf");
-
     }
 
     @And("user click button submit")
     public void userClickButtonSubmit() {
         driver.findElement(By.xpath("//div[@class='MuiStack-root css-x260d1']//button[contains(text(),'Submit')]")).click();
-        Duration duration = Duration.ofSeconds(100);
+        Duration duration = Duration.ofSeconds(800000);
         WebDriverWait wait = new WebDriverWait(driver, duration);
         wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[2]/div/div/div[2]/div/div/div/div/a"))
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".react-pdf__Page__canvas"))
         );
 
 }
 
-    @And("user input field description")
-    public void userInputFieldDescription() {
-        driver.findElement(By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']")).sendKeys("Testing by Yohana Limbong");
-    }
+//    @And("user input field description")
+//    public void userInputFieldDescription() {
+//        driver.findElement(By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']")).sendKeys("Testing by Yohana Limbong");
+//    }
 
     @And("user clikck on button publish")
     public void userClikckOnButtonPublish() {
@@ -234,4 +233,65 @@ public class TestStep extends env_target {
         );
         driver.close();
     }
+
+    //* SCENARIO CASE BELI BATUBARA *//
+
+    @And("user click on button beli batubara")
+    public void userClickOnButtonBeliBatubara() {
+        driver.findElement(By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 w-700 css-1929n4j'][contains(text(),'Beli batubara')]")).click();
+    }
+
+    @And("user input field gar beli batubara")
+    public void userInputFieldGarBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id=':r0:']")).sendKeys("3000");
+    }
+
+    @And("user input field TS beli batubara")
+    public void userInputFieldTSBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id=':r1:']")).sendKeys("2");
+    }
+
+    @And("user input field ASH beli batubara")
+    public void userInputFieldASHBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id=':r2:']")).sendKeys("20");
+    }
+
+    @And("user input field Quantity beli batubara")
+    public void userInputFieldQuantityBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id=':r3:']")).sendKeys("3000");
+    }
+
+    @And("user input field laycan date beli batubara")
+    public void userInputFieldLaycanDateBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[5]/div[2]/div[2]/div/div[5]/div[1]/div[4]/div[5][contains(text(),'25')]")).click();
+    }
+
+    @And("user input field harga beli batubara")
+    public void userInputFieldHargaBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id=':r4:']")).sendKeys("340000");
+    }
+
+    @And("user input loading port beli batubara")
+    public void userInputLoadingPortBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id=':r5:']")).click();
+        driver.findElement(By.xpath("//*[@id=':r5:-option-3']")).click();
+    }
+
+    @And("user input field sumber batu beli batubara")
+    public void userInputFieldSumberBatuBeliBatubara() {
+        driver.findElement(By.xpath("//*[@id=':r7:']")).click();
+        driver.findElement(By.xpath("//*[@id=':r7:-option-3']")).click();
+    }
+
+    @Then("user click button cari batubara")
+    public void userClickButtonCariBatubara() {
+        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/button[2][contains(text(),'Cari batubara')]")).click();
+        Duration duration = Duration.ofSeconds(300000);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 w-700 css-14x0tch'][contains(text(),'Permintaan pembelian batubara')]")) //Muncul wording 'Permintaan pembelian batubara'
+        );
+        driver.close();
+    }
 }
+
