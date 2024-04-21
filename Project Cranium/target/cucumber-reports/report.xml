@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="20.763" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Create a coal selling listing" name="Success create a coal" time="20.385">
+<testsuite name="Cucumber" time="31.355" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Create a coal selling listing" name="Success create a coal" time="30.897">
 <system-out><![CDATA[
 Given User is on indomine homepage..........................................passed
 Then user click button login................................................passed
@@ -19,6 +19,7 @@ And user input field loading port...........................................pass
 And user input field laycan date............................................passed
 And user upload document from directory.....................................passed
 And user click button submit................................................passed
+And user input field description............................................passed
 And user clikck on button publish...........................................passed
 ]]></system-out>
 </testcase>

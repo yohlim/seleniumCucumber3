@@ -223,10 +223,10 @@ public class TestStep extends env_target {
 
 }
 
-//    @And("user input field description")
-//    public void userInputFieldDescription() {
-//        driver.findElement(By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1hof3tc']")).sendKeys("Testing by Yohana Limbong");
-//    }
+    @And("user input field description")
+    public void userInputFieldDescription() {
+        driver.findElement(By.xpath("//*[@id=':rc:']")).sendKeys("Testing by Yohana Limbong");
+    }
 
     @And("user clikck on button publish")
     public void userClikckOnButtonPublish() {
