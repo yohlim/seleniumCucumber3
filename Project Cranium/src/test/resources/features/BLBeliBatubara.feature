@@ -1,4 +1,5 @@
 @All
+  # Buat Listing Beli Batubara
 Feature: Create a coal buying listing
 
   @positive @coalbuying
