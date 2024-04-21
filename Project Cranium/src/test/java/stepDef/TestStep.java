@@ -62,7 +62,20 @@ public class TestStep extends env_target {
         driver.quit();
     }
 
-    //scenario case negative1
+    //Scenario case login positive2
+    @Then("user click wording button Kembali ke homepage")
+    public void userClickWordingButtonKembaliKeHomepage() {
+        driver.findElement(By.xpath("//*[@id='root']/main/div[2]/div/div[2]/a")).click();
+        Duration duration = Duration.ofSeconds(30);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='root']/div/div[1]/div[1]/div/header/div/div/div[2]/div[2]/div[1]/div/a[1]")) // Muncul button login
+        );
+        driver.close();
+
+    }
+
+    //Scenario case login negative1
 
     @And("user input the wrong email")
     public void userInputTheWrongEmail() {
@@ -81,19 +94,7 @@ public class TestStep extends env_target {
         driver.close();
 
     }
-    //Scenario case positive2
-    @Then("user click wording button Kembali ke homepage")
-    public void userClickWordingButtonKembaliKeHomepage() {
-        driver.findElement(By.xpath("//*[@id='root']/main/div[2]/div/div[2]/a")).click();
-        Duration duration = Duration.ofSeconds(30);
-        WebDriverWait wait = new WebDriverWait(driver, duration);
-        wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='root']/div/div[1]/div[1]/div/header/div/div/div[2]/div[2]/div[1]/div/a[1]")) // Muncul button login
-        );
-        driver.close();
-
-    }
-        //Scenario case negative2
+    //Scenario case login negative2
 
     @And("user input the correct password and click login button")
     public void userInputTheCorrectPasswordAndClickLoginButton() {
@@ -107,13 +108,13 @@ public class TestStep extends env_target {
         driver.close();
 
     }
-        //Scenario case negative3
+    //Scenario case login negative3
     @And("user input the correct email")
     public void userInputTheCorrectEmail() {
         driver.findElement(By.xpath("//*[@id='identifier']")).sendKeys("c79980710@gmail.com");
     }
 
-    //Scenario case negative4
+    //Scenario case login negative4
     @And("user click button login on login page without input field email and password")
     public void userClickButtonLoginOnLoginPageWithoutInputFieldEmailAndPassword() {
 
@@ -128,6 +129,9 @@ public class TestStep extends env_target {
     }
 
     //* SCENARIO CASE JUAL BATUBARA *//
+
+    //Scenario case Positive jual barubara
+
     @And("user click button login on login page and redirect to homepage")
     public void userClickButtonLoginOnLoginPageAndRedirectToHomepage() {
         driver.findElement(By.xpath("//*[@id='root']/main/div[2]/div/form/button/p")).click();
@@ -137,16 +141,6 @@ public class TestStep extends env_target {
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='root']/div/div/div/div/header/div/div/div/div[5]/a")) // terdapat button Listing saya
         );
     }
-//    @And("user access form jual batubara")
-//    public void userAccessFormJualBatubara() {
-//        driver.get(jualBatubaraLink);
-//        Duration duration = Duration.ofSeconds(10);
-//        WebDriverWait wait = new WebDriverWait(driver, duration);
-//        wait.until(
-//                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[2]/div[2]/h3[contains (text(),'Jual Batubara')]")) //muncul wording 'jual batubara'
-//        );
-//
-//    }
 
     @And("user click button buat listingan")
     public void userClickButtonBuatListingan() {
@@ -228,8 +222,8 @@ public class TestStep extends env_target {
         driver.findElement(By.xpath("//*[@id=':rc:']")).sendKeys("Testing by Yohana Limbong");
     }
 
-    @And("user clikck on button publish")
-    public void userClikckOnButtonPublish() {
+    @And("user click on button publish")
+    public void userClickOnButtonPublish() {
         driver.findElement(By.xpath("//button[contains(text(),'Publish')]")).click();
         Duration duration = Duration.ofSeconds(30);
         WebDriverWait wait = new WebDriverWait(driver, duration);
@@ -239,6 +233,17 @@ public class TestStep extends env_target {
         driver.close();
     }
 
+    //Scenario case negative1 jual barubara
+    @And("user click button publish")
+    public void userClikcButtonPublish() {
+        driver.findElement(By.xpath("//button[contains(text(),'Publish')]")).click();
+        Duration duration = Duration.ofSeconds(30);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='swal2-html-container'][contains(text(),'Field tidak boleh kosong')]")) //muncul pop up dan mess err 'Masukan value antara 2000 - 9999' dibawah field GAR
+        );
+        driver.close();
+    }
     //* SCENARIO CASE BELI BATUBARA *//
 
     @And("user click on button beli batubara")
