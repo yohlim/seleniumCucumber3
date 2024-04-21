@@ -205,6 +205,11 @@ public class TestStep extends env_target {
     public void userUploadDocumentFromDirectory() {
         //untuk mendapatkan file yang ingin diupload
         driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[2]/div[1]/input")).sendKeys("C:\\Latihan Automation\\file dummy\\contoh.pdf");
+        Duration duration = Duration.ofSeconds(800000);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='react-doc-viewer']"))
+        );
     }
 
     @And("user click button submit")
@@ -213,7 +218,7 @@ public class TestStep extends env_target {
         Duration duration = Duration.ofSeconds(800000);
         WebDriverWait wait = new WebDriverWait(driver, duration);
         wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".react-pdf__Page__canvas")) //dapat membaca file yang di upload
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@class,'box-document border-box')]")) // element xpath untuk memvalidasi bahwa dokumen telah berhasil terupload
         );
 
 }

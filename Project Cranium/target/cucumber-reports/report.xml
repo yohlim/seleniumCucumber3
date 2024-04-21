@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="13.556" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Create a coal buying listing" name="Success to create a coal buying listing" time="13.329">
+<testsuite name="Cucumber" time="20.763" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Create a coal selling listing" name="Success create a coal" time="20.385">
 <system-out><![CDATA[
 Given User is on indomine homepage..........................................passed
 Then user click button login................................................passed
@@ -8,16 +8,18 @@ And user input field email..................................................pass
 And user input field password...............................................passed
 And user click button login on login page and redirect to homepage..........passed
 And user click button buat listingan........................................passed
-And user click on button beli batubara......................................passed
-And user input field gar beli batubara......................................passed
-And user input field TS beli batubara.......................................passed
-And user input field ASH beli batubara......................................passed
-And user input field Quantity beli batubara.................................passed
-And user input field laycan date beli batubara..............................passed
-And user input field harga beli batubara....................................passed
-And user input loading port beli batubara...................................passed
-And user input field sumber batu beli batubara..............................passed
-Then user click button cari batubara........................................passed
+And user click on button jual batubara......................................passed
+And user input field GAR....................................................passed
+And user input field TS.....................................................passed
+And user input field Ash....................................................passed
+And user input field Quantity...............................................passed
+And user input field Harga Batubara.........................................passed
+And user input field Sumber Batu............................................passed
+And user input field loading port...........................................passed
+And user input field laycan date............................................passed
+And user upload document from directory.....................................passed
+And user click button submit................................................passed
+And user clikck on button publish...........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

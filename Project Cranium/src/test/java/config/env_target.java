@@ -9,4 +9,5 @@ public class env_target {
     protected String jualBatubaraLink = "https://indomine.cranium.id/jual-batubara";
 
 
+
 }
