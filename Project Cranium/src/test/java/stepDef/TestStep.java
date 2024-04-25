@@ -4,7 +4,9 @@ import config.env_target;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -108,6 +110,7 @@ public class TestStep extends env_target {
         driver.close();
 
     }
+
     //Scenario case login negative3
     @And("user input the correct email")
     public void userInputTheCorrectEmail() {
@@ -215,7 +218,7 @@ public class TestStep extends env_target {
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@class,'box-document border-box')]")) // element xpath untuk memvalidasi bahwa dokumen telah berhasil terupload
         );
 
-}
+    }
 
     @And("user input field description")
     public void userInputFieldDescription() {
@@ -245,6 +248,8 @@ public class TestStep extends env_target {
         driver.close();
     }
     //* SCENARIO CASE BELI BATUBARA *//
+
+    //Scenario case beli batubara positive1
 
     @And("user click on button beli batubara")
     public void userClickOnButtonBeliBatubara() {
@@ -303,5 +308,17 @@ public class TestStep extends env_target {
         );
         driver.close();
     }
+
+    @Then("appear mess err when user click button cari batubara")
+    public void appearMessErrWhenUserClickButtonCariBatubara() {
+        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/button[2][contains(text(),'Cari batubara')]")).click();
+        Duration duration = Duration.ofSeconds(300000);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='swal2-html-container'][contains(text(),'Field tidak boleh kosong')]")) //Muncul pop up err 'field tidak boleh kosong'
+        );
+        driver.close();
+    }
 }
+
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="87.885" tests="4" skipped="0" failures="0" errors="0">
-<testcase classname="Create a coal selling listing" name="Success create a coal" time="31.533">
+<testsuite name="Cucumber" time="135.675" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="Create a coal buying listing" name="Success to create a coal buying listing" time="13.206">
 <system-out><![CDATA[
 Given User is on indomine homepage..........................................passed
 Then user click button login................................................passed
@@ -8,22 +8,19 @@ And user input field email..................................................pass
 And user input field password...............................................passed
 And user click button login on login page and redirect to homepage..........passed
 And user click button buat listingan........................................passed
-And user click on button jual batubara......................................passed
-And user input field GAR....................................................passed
-And user input field TS.....................................................passed
-And user input field Ash....................................................passed
-And user input field Quantity...............................................passed
-And user input field Harga Batubara.........................................passed
-And user input field Sumber Batu............................................passed
-And user input field loading port...........................................passed
-And user input field laycan date............................................passed
-And user upload document from directory.....................................passed
-And user click button submit................................................passed
-And user input field description............................................passed
-And user click on button publish............................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then user click button cari batubara........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Create a coal selling listing" name="user can't create a coal for to selling if doesn't input field GAR" time="23.583">
+<testcase classname="Create a coal buying listing" name="user Success to create a coal buying listing without input field laycan date" time="12.723">
 <system-out><![CDATA[
 Given User is on indomine homepage..........................................passed
 Then user click button login................................................passed
@@ -31,21 +28,18 @@ And user input field email..................................................pass
 And user input field password...............................................passed
 And user click button login on login page and redirect to homepage..........passed
 And user click button buat listingan........................................passed
-And user click on button jual batubara......................................passed
-And user input field TS.....................................................passed
-And user input field Ash....................................................passed
-And user input field Quantity...............................................passed
-And user input field Harga Batubara.........................................passed
-And user input field Sumber Batu............................................passed
-And user input field loading port...........................................passed
-And user input field laycan date............................................passed
-And user upload document from directory.....................................passed
-And user click button submit................................................passed
-And user input field description............................................passed
-And user click button publish...............................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then user click button cari batubara........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Create a coal selling listing" name="user can't create a coal for to selling if doesn't input field TS" time="18.045">
+<testcase classname="Create a coal buying listing" name="user Success to create a coal buying listing without input field loading port" time="22.135">
 <system-out><![CDATA[
 Given User is on indomine homepage..........................................passed
 Then user click button login................................................passed
@@ -53,21 +47,18 @@ And user input field email..................................................pass
 And user input field password...............................................passed
 And user click button login on login page and redirect to homepage..........passed
 And user click button buat listingan........................................passed
-And user click on button jual batubara......................................passed
-And user input field GAR....................................................passed
-And user input field Ash....................................................passed
-And user input field Quantity...............................................passed
-And user input field Harga Batubara.........................................passed
-And user input field Sumber Batu............................................passed
-And user input field loading port...........................................passed
-And user input field laycan date............................................passed
-And user upload document from directory.....................................passed
-And user click button submit................................................passed
-And user input field description............................................passed
-And user click button publish...............................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input field sumber batu beli batubara..............................passed
+Then user click button cari batubara........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Create a coal selling listing" name="user can't create a coal for to selling if doesn't input field Ash" time="14.413">
+<testcase classname="Create a coal buying listing" name="user Success to create a coal buying listing without input field sumber batu" time="11.277">
 <system-out><![CDATA[
 Given User is on indomine homepage..........................................passed
 Then user click button login................................................passed
@@ -75,18 +66,127 @@ And user input field email..................................................pass
 And user input field password...............................................passed
 And user click button login on login page and redirect to homepage..........passed
 And user click button buat listingan........................................passed
-And user click on button jual batubara......................................passed
-And user input field GAR....................................................passed
-And user input field TS.....................................................passed
-And user input field Quantity...............................................passed
-And user input field Harga Batubara.........................................passed
-And user input field Sumber Batu............................................passed
-And user input field loading port...........................................passed
-And user input field laycan date............................................passed
-And user upload document from directory.....................................passed
-And user click button submit................................................passed
-And user input field description............................................passed
-And user click button publish...............................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+Then user click button cari batubara........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a coal buying listing" name="user Success to create a coal buying listing without input field loading port dan sumber batu" time="12.738">
+<system-out><![CDATA[
+Given User is on indomine homepage..........................................passed
+Then user click button login................................................passed
+And user input field email..................................................passed
+And user input field password...............................................passed
+And user click button login on login page and redirect to homepage..........passed
+And user click button buat listingan........................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+Then user click button cari batubara........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a coal buying listing" name="user can't create coal buying if doesn't input field gar" time="14.566">
+<system-out><![CDATA[
+Given User is on indomine homepage..........................................passed
+Then user click button login................................................passed
+And user input field email..................................................passed
+And user input field password...............................................passed
+And user click button login on login page and redirect to homepage..........passed
+And user click button buat listingan........................................passed
+And user click on button beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then appear mess err when user click button cari batubara...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a coal buying listing" name="user can't create coal buying if doesn't input field TS" time="11.948">
+<system-out><![CDATA[
+Given User is on indomine homepage..........................................passed
+Then user click button login................................................passed
+And user input field email..................................................passed
+And user input field password...............................................passed
+And user click button login on login page and redirect to homepage..........passed
+And user click button buat listingan........................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then appear mess err when user click button cari batubara...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a coal buying listing" name="user can't create coal buying if doesn't input field ASH" time="12.307">
+<system-out><![CDATA[
+Given User is on indomine homepage..........................................passed
+Then user click button login................................................passed
+And user input field email..................................................passed
+And user input field password...............................................passed
+And user click button login on login page and redirect to homepage..........passed
+And user click button buat listingan........................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then appear mess err when user click button cari batubara...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a coal buying listing" name="user can't create coal buying if doesn't input field Quantity" time="13.106">
+<system-out><![CDATA[
+Given User is on indomine homepage..........................................passed
+Then user click button login................................................passed
+And user input field email..................................................passed
+And user input field password...............................................passed
+And user click button login on login page and redirect to homepage..........passed
+And user click button buat listingan........................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field laycan date beli batubara..............................passed
+And user input field harga beli batubara....................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then appear mess err when user click button cari batubara...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a coal buying listing" name="user can't create coal buying if doesn't input field harga batubara" time="11.197">
+<system-out><![CDATA[
+Given User is on indomine homepage..........................................passed
+Then user click button login................................................passed
+And user input field email..................................................passed
+And user input field password...............................................passed
+And user click button login on login page and redirect to homepage..........passed
+And user click button buat listingan........................................passed
+And user click on button beli batubara......................................passed
+And user input field gar beli batubara......................................passed
+And user input field TS beli batubara.......................................passed
+And user input field ASH beli batubara......................................passed
+And user input field Quantity beli batubara.................................passed
+And user input loading port beli batubara...................................passed
+And user input field sumber batu beli batubara..............................passed
+Then appear mess err when user click button cari batubara...................passed
 ]]></system-out>
 </testcase>
 </testsuite>
