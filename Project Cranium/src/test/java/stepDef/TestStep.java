@@ -319,6 +319,107 @@ public class TestStep extends env_target {
         );
         driver.close();
     }
+
+    //* SCENARIO CASE JUAL NICKEL *//
+
+    //Scenario case jual nickel positive1
+
+    @And("user click on button jual nickel")
+    public void userClickOnButtonJualNickel() {
+        driver.findElement(By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 w-700 css-1929n4j'][contains(text(),'Jual Nikel')]")).click();
+    }
+
+    @And("user input field Ni on selling form")
+    public void userInputFieldNiOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r0:']")).sendKeys("23");
+    }
+
+    @And("user input field Fe on selling form")
+    public void userInputFieldFeOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r1:']")).sendKeys("45");
+    }
+
+    @And("user input field Kadar air on selling form")
+    public void userInputFieldKadarAirOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r2:']")).sendKeys("34");
+    }
+
+    @And("user input field Si atau Mg on selling form")
+    public void userInputFieldSiAtauMgOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r3:']")).sendKeys("2");
+    }
+
+    @And("user input field Quantity on selling form")
+    public void userInputFieldQuantityOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r4:']")).sendKeys("4000");
+    }
+
+    @And("user input field harga nickel on selling form")
+    public void userInputFieldHargaNickelOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r5:']")).sendKeys("560000");
+    }
+
+    @And("user input field Sumber Batu on selling form")
+    public void userInputFieldSumberBatuOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r6:']")).click();
+        driver.findElement(By.id(":r6:-option-3")).click(); //list dropdown pada field sumber batu
+    }
+
+    @And("user input field loading port on selling form")
+    public void userInputFieldLoadingPortOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':r8:']")).click();
+        driver.findElement(By.id(":r8:-option-3")).click(); //list dropdown pada field loading port
+    }
+
+    @And("user input field Laycan date on selling form")
+    public void userInputFieldLaycanDateOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[5]/div[2]/div[6]/div/div/div[1]/img")).click();
+        driver.findElement(By.xpath("//div[@class='MuiDayCalendar-weekContainer css-mvmu1r']//button[text()='6']")).click();
+    }
+
+    @And("user upload dokumen on selling form")
+    public void userUploadDokumenOnSellingForm() {
+        //untuk mendapatkan file yang ingin diupload
+        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[2]/div[1]/input")).sendKeys("C:\\Latihan Automation\\file dummy\\contoh.pdf");
+        Duration duration = Duration.ofSeconds(800000);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='react-doc-viewer']"))
+        );
+
+    }
+
+    @And("user click button submit on selling form")
+    public void userClickButtonSubmitOnSellingForm() {
+        driver.findElement(By.xpath("//div[@class='MuiStack-root css-x260d1']//button[contains(text(),'Submit')]")).click();
+        Duration duration = Duration.ofSeconds(800000);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@class,'box-document border-box')]")) // element xpath untuk memvalidasi bahwa dokumen telah berhasil terupload
+        );
+
+    }
+
+    @And("user input field deskripsi on selling form")
+    public void userInputFieldDeskripsiOnSellingForm() {
+        driver.findElement(By.xpath("//*[@id=':rd:']")).sendKeys("Testing by Yohana Limbong");
+    }
+
+    @And("user button publish on selling form")
+    public void userButtonPublishOnSellingForm() {
+        driver.findElement(By.xpath("//button[contains(text(),'Publish')]")).click();
+        Duration duration = Duration.ofSeconds(30);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='root']/div/div[2]/div/div[2]/div[1]/p[contains(text(),'Listing saya')]")) //Muncul wording 'Listing Saya'
+        );
+        driver.close();
+    }
+    //Scenario case jual nickel positive2
+    @And("user select company to display listing on nickel form")
+    public void userSelectCompanyToDisplayListingOnNickelForm() {
+        driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div[7]/div[2]/div[5]/div[1]/span/input")).click();
+    }
 }
 
 
